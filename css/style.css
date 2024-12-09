@@ -1,0 +1,64 @@
+body {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+.accordion-item {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.accordion-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.25rem;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+.accordion-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.accordion-body {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    color: black;
+}
+.accordion-collapse:not(.show) {
+    border: none;
+}
+.element-1 { background-color: #1A6590; color: white; }
+.element-2 { background-color: #70375F; color: white; }
+.element-3 { background-color: #55720F; color: white; }
+.element-4 { background-color: #91651F; color: white; }
+.element-5 { background-color: #627C90; color: white; }
+.element-6 { background-color: #CA470F; color: white; }
+.element-7 { background-color: #7B8C0F; color: white; }
+.element-8 { background-color: #115950; color: white; }
+.element-9 { background-color: #DEB10F; color: white; }
+.element-10 { background-color: #3F98A0; color: white; }
+.element-1 .accordion-item { background-color: #5A8FB0; }
+.element-2 .accordion-item { background-color: #A05F7F; }
+.element-3 .accordion-item { background-color: #85A23F; }
+.element-4 .accordion-item { background-color: #C1954F; }
+.element-5 .accordion-item { background-color: #92ACB0; }
+.element-6 .accordion-item { background-color: #FA775F; }
+.element-7 .accordion-item { background-color: #ABB03F; }
+.element-8 .accordion-item { background-color: #419980; }
+.element-9 .accordion-item { background-color: #FEE13F; }
+.element-10 .accordion-item { background-color: #6FC8D0; }
+.subaccordion-section {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.subaccordion-section:last-child {
+    border-bottom: none;
+}
+.hover-helper {
+    color: #888;
+    font-size: 0.9rem;
+}
