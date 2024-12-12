@@ -1,10 +1,12 @@
 body {
     padding: 20px;
     font-family: Arial, sans-serif;
+    background-color: azure;
 }
 .accordion-item {
     margin-bottom: 10px;
     padding: 10px;
+    border-radius: 5px;
 }
 .accordion-button {
     background-color: transparent;
@@ -28,6 +30,14 @@ body {
     border-top: 1px solid #ddd;
     color: black;
 }
+
+.accordion-body .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
 .accordion-collapse:not(.show) {
     border: none;
 }

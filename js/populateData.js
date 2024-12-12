@@ -8,10 +8,9 @@ async function fetchQuestions(mainIndex) {
 async function populateSubAccordions(mainIndex, subCount) {
     const questions = await fetchQuestions(mainIndex);
     for (let i = 1; i <= subCount; i++) {
-        const question = questions[i - 1] ? questions[i - 1].question : `Question #${mainIndex}.${i}`;
-        const guidelines = questions[i - 1] ? questions[i - 1].guidelines : `Guidelines for question #${mainIndex}.${i}`;
-        document.querySelector(`#collapse${mainIndex}_${i} .subaccordion-section.question`).innerHTML = `<strong>Question:</strong> ${question}`;
-        document.querySelector(`#collapse${mainIndex}_${i} .subaccordion-section.guidelines`).innerHTML = `<strong>Guidelines:</strong> ${guidelines}`;
+        const questionData = questions.find(q => q.number === `${mainIndex}.${i}`);
+        const questionText = questionData ? questionData.question : `Question #${mainIndex}.${i}`;
+        document.querySelector(`#collapse${mainIndex}_${i} .question-data`).innerHTML = questionText;
     }
 }
 
@@ -28,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
         { mainIndex: 9, subCount: 13 },
         { mainIndex: 10, subCount: 8 }
     ];
-
     elements.forEach(element => {
         populateSubAccordions(element.mainIndex, element.subCount);
     });
